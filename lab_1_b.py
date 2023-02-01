@@ -144,12 +144,11 @@ class EarlyStopping:
 
 class RegularizedMLPTrainer:
     """
-    A PyTorch trainer class for multi-layer perceptron models with penalization term and MSE loss.
+    A PyTorch trainer class for multi-layer perceptron models and MSE loss.
     
     Args:
         model (nn.Module): The multi-layer perceptron model to be trained.
         dataloader (DataLoader): PyTorch dataloader to provide training data.
-        p (float): The penalization coefficient.
         ds_val (TensorDataset): the input for the validation set
         loss_fn (nn.Module, optional): Loss function to be used for training. Defaults to nn.MSELoss().
         optimizer (torch.optim, optional): Optimization algorithm to be used for training. Defaults to torch.optim.SGD.
